@@ -25,14 +25,11 @@ function htmlToElement(rawHtml, opts, done) {
       }
 
       if (node.type == 'text') {
-        return entities.decodeHTML(node.data);
-        /*
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={[{fontSize: 10}, parent ? opts.styles[parent.name] : null]}>
             {entities.decodeHTML(node.data)}
           </Text>
         )
-        */
       }
 
       if (node.type == 'tag') {
