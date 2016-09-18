@@ -70,8 +70,16 @@ function htmlToElement(rawHtml, opts, done) {
           <Text key={index} onPress={linkPressHandler}>
             {node.name == 'pre' ? LINE_BREAK : null}
             {node.name == 'li' ? BULLET : null}
+            {node.name == 'meaning' ? "☆ " : null}
+            {node.name == 'sample' ? "→ " : null}
+            {node.name == 'samplemeaning' ? "© " : null}
             {domToElement(node.children, node)}
-            {node.name == 'tr' ? LINE_BREAK : null}
+            {node.name == 'samemeaning' ? LINE_BREAK : null}
+            {node.name == 'type' ? LINE_BREAK : null}
+            {node.name == 'meaning' ? LINE_BREAK : null}
+            {node.name == 'sample' ? LINE_BREAK : null}
+            {node.name == 'samplemeaning' ? LINE_BREAK : null}
+            {node.name == 'hiragana' ? LINE_BREAK : null}
             {node.name == 'br' || node.name == 'li' ? LINE_BREAK : null}
             {node.name == 'p' && index < list.length - 1 ? PARAGRAPH_BREAK : null}
             {node.name == 'h1' || node.name == 'h2' || node.name == 'h3' || node.name == 'h4' || node.name == 'h5' ? LINE_BREAK : null}
