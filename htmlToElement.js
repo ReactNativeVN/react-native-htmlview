@@ -74,6 +74,14 @@ function htmlToElement(rawHtml, opts, done) {
             {node.name == 'sample' ? "→ " : null}
             {node.name == 'samplemeaning' ? "© " : null}
             {domToElement(node.children, node)}
+            {node.name == 'grammar' ? LINE_BREAK : null}
+            {node.name == 'connection' ? LINE_BREAK : null}
+            {node.name == 'conversation' ? LINE_BREAK : null}
+            {node.name == 'explanation' ? LINE_BREAK : null}
+            {node.name == 'example' ? LINE_BREAK : null}
+            {node.name == 'exercise' ? LINE_BREAK : null}
+            {node.name == 'answer' ? LINE_BREAK : null}
+
             {node.name == 'samemeaning' ? LINE_BREAK : null}
             {node.name == 'type' ? LINE_BREAK : null}
             {node.name == 'meaning' ? LINE_BREAK : null}
